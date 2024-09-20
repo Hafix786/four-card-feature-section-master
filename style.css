@@ -1,0 +1,106 @@
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: hsl(225, 2%, 44%);
+    font-size: 15px;
+    background-color: rgb(250, 250, 250);
+}
+main{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    padding: 1rem;
+}
+.heading{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.second-heading{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+header > p{
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1rem;
+    gap: 2rem;
+}
+.box{
+    max-width: 350px;
+    height: 250px;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 2px 2px rgb(211, 209, 209);
+    
+}
+.sub-heading{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+.cyan{
+    background-color: hsl(180, 62%, 55%);
+}
+.red{
+    background-color: hsl(0, 78%, 62%);
+}
+.orange{
+    background-color: hsl(34, 97%, 64%);
+}
+.blue{
+    background-color:  hsl(212, 86%, 64%);
+}
+.line{
+    margin-inline: 2px;
+    min-height: .3rem;
+    border-radius: inherit ;
+}
+.m-inline,
+img{
+    margin-inline: 2rem;
+}
+img{
+    max-width: 50px;
+    align-self: end;
+    margin-top: 2rem;
+}
+
+@media (width > 475px){
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        'empty-top-left team-builder empty-top-right'
+        'supervisor team-builder calculator'
+        'supervisor karma calculator'
+        'empty-bottom-left karma empty-bottom-right'
+        ;
+    }
+
+    .supervisor{
+        grid-area: supervisor;
+    }
+    .team-builder{
+        grid-area: team-builder;
+    }
+    .karma{
+        grid-area: karma;
+    }
+    .calculator{
+        grid-area: calculator;
+        
+    }
+
+}
